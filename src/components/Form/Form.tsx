@@ -3,6 +3,7 @@ import React from 'react';
 import { isValid } from '../../utils';
 
 export interface FormProps {
+  logoImageUrl: string;
   onFormSubmit: (e: any) => any;
   onEmailChange: (e: React.ChangeEvent<HTMLInputElement>) => any;
   onPasswordChange: (e: React.ChangeEvent<HTMLInputElement>) => any;
@@ -54,37 +55,61 @@ class Form extends React.Component<FormProps, FormState, any> {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        <div className="form-floating">
-          <input
-            onChange={this.handleEmailChange}
-            type="email"
-            className="form-control"
-            id="floatingInputz"
-            placeholder="name@example.com"
-            value={this.state.email}
-          />
-          <label htmlFor="floatingInputz">Email address</label>
-        </div>
-        <div className="form-floating">
-          <input
-            onChange={this.handlePasswordChange}
-            type="password"
-            className="form-control"
-            id="floatingPasswordz"
-            placeholder="Password"
-            value={this.state.password}
-          />
-          <label htmlFor="floatingPasswordz">Password</label>
-        </div>
-        <button
-          className="w-100 bt btn-primary"
-          type="submit"
-          onClick={this.handleSignInClick}
-        >
-          Sign in
-        </button>
-      </form>
+      <main className="form-signin text-center w-100 m-auto">
+        <form onSubmit={this.handleFormSubmit}>
+          <div className="form-floating">
+            <img
+              className="mb-4"
+              src={
+                this.props.logoImageUrl ||
+                'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-sample-market-research-flaticons-lineal-color-flat-icons.png'
+              }
+              width={72}
+              height={72}
+              alt="logo"
+            />
+            <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+            <input
+              onChange={this.handleEmailChange}
+              type="email"
+              className="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+              value={this.state.email}
+            />
+            <label htmlFor="floatingInput">Email address</label>
+          </div>
+          <div className="form-floating">
+            <input
+              onChange={this.handlePasswordChange}
+              type="password"
+              className="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+              value={this.state.password}
+            />
+            <label htmlFor="floatingPassword">Password</label>
+          </div>
+          <div className="checkbox mb-3">
+            <label>
+              <input
+                type="checkbox"
+                value="remember-me"
+                onChange={this.handleCheckBoxChange}
+              />{' '}
+              Remember me
+            </label>
+          </div>
+          <button
+            className="w-100 bt btn-lg btn-primary"
+            type="submit"
+            onClick={this.handleSignInClick}
+          >
+            Sign in
+          </button>
+          <p className="mt-5 mb-3 text-muted">© 2022-Present</p>
+        </form>
+      </main>
     );
   }
 }

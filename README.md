@@ -2,9 +2,32 @@
 
 React login form in bootstrap
 
-ex)
+```shell
+$ npm install bootstrap@5.2.0-beta1 @schoi-godaddy/react-mallog
 
-![latest login page image](./img/v1.1.2.png)
+...
+```
+
+```typescript
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Form } from "@schoi-godaddy/react-mallog";
+
+function App {
+  return (
+    <Form
+      logoImageUrl="image url or path"
+      onCheckBoxChange={...}
+      onEmailChange={...}
+      onFormSubmit={...}
+      onPasswordChange={...}
+      onSignInClick={...}
+    />
+  );
+};
+```
+
+![latest login page image](./img/v1.2.x.png)
 
 ## DISCLAIMER ⚠️
 
