@@ -2,6 +2,10 @@
 
 React login form in bootstrap
 
+ex)
+
+![latest login page image](./img/v1.1.2.png)
+
 ## DISCLAIMER ⚠️
 
 PLEASE DO NOT USE THIS - This package is for demo purpose.
