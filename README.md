@@ -33,6 +33,16 @@ function App {
 
 PLEASE DO NOT USE THIS - This package is for demo purpose.
 
+## Deploy
+
+```shell
+$ npm run rollup
+...
+
+$ npm publish
+...
+```
+
 ## Citations
 
 - https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe

