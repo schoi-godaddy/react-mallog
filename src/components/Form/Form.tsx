@@ -54,39 +54,37 @@ class Form extends React.Component<FormProps, FormState, any> {
 
   render() {
     return (
-      <main className="form-signin text-center w-100 m-auto">
-        <form onSubmit={this.handleFormSubmit}>
-          <div className="form-floating">
-            <input
-              onChange={this.handleEmailChange}
-              type="email"
-              className="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-              value={this.state.email}
-            />
-            <label htmlFor="floatingInput">Email address</label>
-          </div>
-          <div className="form-floating">
-            <input
-              onChange={this.handlePasswordChange}
-              type="password"
-              className="form-control"
-              id="floatingPassword"
-              placeholder="Password"
-              value={this.state.password}
-            />
-            <label htmlFor="floatingPassword">Password</label>
-          </div>
-          <button
-            className="w-100 bt btn-primary"
-            type="submit"
-            onClick={this.handleSignInClick}
-          >
-            Sign in
-          </button>
-        </form>
-      </main>
+      <form onSubmit={this.handleFormSubmit}>
+        <div className="form-floating">
+          <input
+            onChange={this.handleEmailChange}
+            type="email"
+            className="form-control"
+            id="floatingInputz"
+            placeholder="name@example.com"
+            value={this.state.email}
+          />
+          <label htmlFor="floatingInputz">Email address</label>
+        </div>
+        <div className="form-floating">
+          <input
+            onChange={this.handlePasswordChange}
+            type="password"
+            className="form-control"
+            id="floatingPasswordz"
+            placeholder="Password"
+            value={this.state.password}
+          />
+          <label htmlFor="floatingPasswordz">Password</label>
+        </div>
+        <button
+          className="w-100 bt btn-primary"
+          type="submit"
+          onClick={this.handleSignInClick}
+        >
+          Sign in
+        </button>
+      </form>
     );
   }
 }
