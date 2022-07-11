@@ -86,8 +86,8 @@ class Form extends React.Component<FormProps, FormState, any> {
                 this.props.logoImageUrl ||
                 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-sample-market-research-flaticons-lineal-color-flat-icons.png'
               }
-              width={72}
-              height={72}
+              width={80}
+              height={80}
               alt="logo"
             />
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
